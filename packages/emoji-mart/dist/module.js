@@ -707,6 +707,7 @@ var $b247ea80b67298d5$export$2e2bcd8739ae039 = {
     onAddCustomEmoji: null,
     onClickOutside: null,
     onEmojiSelect: null,
+    onSkinChange: null,
     // Deprecated
     stickySearch: {
         deprecated: true,

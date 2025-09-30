@@ -113,6 +113,7 @@ export default {
   onAddCustomEmoji: null,
   onClickOutside: null,
   onEmojiSelect: null,
+  onSkinChange: null,
 
   // Deprecated
   stickySearch: {

@@ -169,6 +169,7 @@ export class Picker extends ShadowElement {
         onAddCustomEmoji: any;
         onClickOutside: any;
         onEmojiSelect: any;
+        onSkinChange: any;
         stickySearch: {
             deprecated: boolean;
             value: boolean;
