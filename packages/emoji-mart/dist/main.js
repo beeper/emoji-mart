@@ -4824,6 +4824,7 @@ var $75afa6943437e26f$export$2e2bcd8739ae039 = /*#__PURE__*/ function(Component1
         {
             key: "handleSkinClick",
             value: function handleSkinClick(skin) {
+                var _props, ref;
                 this.ignoreMouse();
                 this.closeSkins();
                 this.setState({
@@ -4831,6 +4832,7 @@ var $75afa6943437e26f$export$2e2bcd8739ae039 = /*#__PURE__*/ function(Component1
                     tempSkin: null
                 });
                 (0, $000e3cabb83607f9$export$2e2bcd8739ae039).set("skin", skin);
+                (ref = (_props = this.props).onSkinChange) === null || ref === void 0 ? void 0 : ref.call(_props, skin);
             }
         },
         {

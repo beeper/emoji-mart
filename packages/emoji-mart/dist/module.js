@@ -2321,6 +2321,7 @@ class $89bd6bb200cc8fef$export$2e2bcd8739ae039 extends (0, $fb96b826c0c5f37a$exp
             tempSkin: null
         });
         (0, $f72b75cf796873c7$export$2e2bcd8739ae039).set("skin", skin);
+        this.props.onSkinChange?.(skin);
     }
     renderNav() {
         return /*#__PURE__*/ (0, $bd9dd35321b03dd4$export$34b9dba7ce09269b)((0, $ec8c39fdad15601a$export$2e2bcd8739ae039), {

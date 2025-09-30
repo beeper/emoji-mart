@@ -673,6 +673,7 @@ export default class Picker extends Component {
 
     this.setState({ skin, tempSkin: null })
     Store.set('skin', skin)
+    this.props.onSkinChange?.(skin)
   }
 
   renderNav() {
