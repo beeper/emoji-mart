@@ -138,7 +138,7 @@ li + li {
 }
 
 select, button {
-  cursor: pointer;
+  cursor: var(--cursor);
   color: inherit;
   font: inherit;
   appearance: none;

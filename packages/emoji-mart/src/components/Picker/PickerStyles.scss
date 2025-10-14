@@ -69,7 +69,7 @@
 
   &[data-menu] {
     button { cursor: auto }
-    .menu button { cursor: pointer }
+    .menu button { cursor: var(--cursor) }
   }
 }
 
@@ -274,7 +274,7 @@ svg {
 
 button {
   appearance: none;
-  cursor: pointer;
+  cursor: var(--cursor);
   color: currentColor;
   border: 0;
   background-color: transparent;
