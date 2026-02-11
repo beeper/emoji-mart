@@ -8,7 +8,6 @@
 
   --border-radius: 10px;
   --category-icon-size: 18px;
-  --font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   --font-size: 15px;
 
   --preview-placeholder-size: 21px;
@@ -358,7 +357,6 @@ button {
 
   button {
     position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 
     & > * { position: relative }
 
