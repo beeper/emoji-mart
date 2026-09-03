@@ -1523,14 +1523,6 @@ var $000e3cabb83607f9$export$2e2bcd8739ae039 = {
 var $551eac79ded07bc8$var$CACHE = new Map();
 var $551eac79ded07bc8$var$VERSIONS = [
     {
-        v: 16,
-        emoji: "\uD83E\uDEE9"
-    },
-    {
-        v: 15.1,
-        emoji: "\uD83D\uDE42\u200D\u2195\uFE0F"
-    },
-    {
         v: 15,
         emoji: "\uD83E\uDEE8"
     },
@@ -3035,8 +3027,8 @@ function $4229cb2d7488f9c8$export$2e2bcd8739ae039(props) {
     emoji || (emoji = (0, $022b4a7de802d8eb$export$2e2bcd8739ae039).get(id || props.native));
     if (!emoji) return props.fallback;
     var emojiSkin = emoji.skins[skin - 1] || emoji.skins[0];
-    var imageSrc = emojiSkin.src || (props.set != "native" && !props.spritesheet ? typeof props.getImageURL === "function" ? props.getImageURL(props.set, emojiSkin.unified) : "https://cdn.jsdelivr.net/npm/emoji-datasource-".concat(props.set, "@16.0.0/img/").concat(props.set, "/64/").concat(emojiSkin.unified, ".png") : undefined);
-    var spritesheetSrc = typeof props.getSpritesheetURL === "function" ? props.getSpritesheetURL(props.set) : "https://cdn.jsdelivr.net/npm/emoji-datasource-".concat(props.set, "@16.0.0/img/").concat(props.set, "/sheets-256/64.png");
+    var imageSrc = emojiSkin.src || (props.set != "native" && !props.spritesheet ? typeof props.getImageURL === "function" ? props.getImageURL(props.set, emojiSkin.unified) : "https://cdn.jsdelivr.net/npm/emoji-datasource-".concat(props.set, "@15.0.1/img/").concat(props.set, "/64/").concat(emojiSkin.unified, ".png") : undefined);
+    var spritesheetSrc = typeof props.getSpritesheetURL === "function" ? props.getSpritesheetURL(props.set) : "https://cdn.jsdelivr.net/npm/emoji-datasource-".concat(props.set, "@15.0.1/img/").concat(props.set, "/sheets-256/64.png");
     return /*#__PURE__*/ (0, $55ec52987511209e$export$34b9dba7ce09269b)("span", {
         class: "emoji-mart-emoji",
         "data-emoji-set": props.set,
