@@ -7,7 +7,7 @@ const unicodeEmoji = require('unicode-emoji-json')
 
 const DRY_RUN = process.argv.indexOf('--dry') != -1
 
-const VERSIONS = [1, 2, 3, 4, 5, 11, 12, 12.1, 13, 13.1, 14, 15]
+const VERSIONS = [1, 2, 3, 4, 5, 11, 12, 12.1, 13, 13.1, 14, 15, 15.1, 16]
 const SKINS = ['1F3FB', '1F3FC', '1F3FD', '1F3FE', '1F3FF']
 const SETS = ['native', 'apple', 'facebook', 'google', 'twitter']
 const CATEGORIES = [
@@ -40,7 +40,7 @@ function buildData({ set, version } = {}) {
     categories: [],
     emojis: {},
     aliases: {},
-    sheet: { cols: 61, rows: 61 },
+    sheet: { cols: 62, rows: 62 },
   }
 
   CATEGORIES.forEach((category, i) => {
@@ -192,11 +192,14 @@ function buildData({ set, version } = {}) {
   // Merge “Smileys & Emotion” and “People & Body” into a single category
   let smileys = data.categories[0]
   let people = data.categories[1]
+  // Keep People & Body ahead of the robot, wherever new smileys push it
+  let peopleAt = smileys.emojis.indexOf('robot_face')
+  if (peopleAt == -1) throw new Error('robot_face is missing')
   let smileysAndPeople = { id: 'people' }
   smileysAndPeople.emojis = []
-    .concat(smileys.emojis.slice(0, 114))
+    .concat(smileys.emojis.slice(0, peopleAt))
     .concat(people.emojis)
-    .concat(smileys.emojis.slice(114))
+    .concat(smileys.emojis.slice(peopleAt))
 
   data.categories.unshift(smileysAndPeople)
   data.categories.splice(1, 2)
